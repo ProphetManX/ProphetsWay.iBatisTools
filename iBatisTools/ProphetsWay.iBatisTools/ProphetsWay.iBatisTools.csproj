@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net40;net45;net451;net452;net46;net461;net471;netstandard2.0;netcoreapp2.2;netcoreapp2.1;netcoreapp2;</TargetFrameworks>
+    <RootNamespace>ProphetsWay.iBatisTools</RootNamespace>
+    <AssemblyName>ProphetsWay.iBatisTools</AssemblyName>
+    <ApplicationIcon />
+    <Win32Resource />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SignAssembly>false</SignAssembly>
+    <Authors>G. Gordon Nasseri</Authors>
+    <Company>ProphetsWay</Company>
+    <Description>
+      A small library that is useful when utilizing iBatisNet for a Data Access Layer (DAL).
+
+      Go to https://github.com/ProphetManX/ProphetsWay.iBatisTools for more information.
+    </Description>
+
+    <!-- Assembly Override Properties -->
+    <PackageRequireLicenseAcceptance />
+    <PackageId />
+    <Version />
+    <Authors />
+    <Company />
+    <Product />
+
+    <Copyright />
+    <PackageLicenseUrl />
+    <PackageProjectUrl />
+    <PackageIconUrl />
+    <RepositoryUrl />
+    <RepositoryType />
+    <PackageTags />
+    <PackageReleaseNotes />
+    <NeutralLanguage />
+    <AssemblyVersion />
+    <FileVersion />
+    <InformationalVersion />
+
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net451'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net471'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+    <PackageReference Include="IBatisNet45">
+      <Version>1.6.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
+    <PackageReference Include="ProphetsWay.Logger" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
