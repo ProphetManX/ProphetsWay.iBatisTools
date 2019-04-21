@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net40;net45;net451;net452;net46;net461;net471;netstandard2.0;netcoreapp2.2;netcoreapp2.1;netcoreapp2;</TargetFrameworks>
+    <TargetFrameworks>net45;net451;net452;net46;net461;net471;netstandard2.0;netcoreapp2.2;netcoreapp2.1;netcoreapp2;</TargetFrameworks>
     <RootNamespace>ProphetsWay.iBatisTools</RootNamespace>
     <AssemblyName>ProphetsWay.iBatisTools</AssemblyName>
     <ApplicationIcon />
@@ -42,7 +42,8 @@
   <ItemGroup>
     <PackageReference Include="IBatisNet" Version="1.0.0" />
     <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
-    <PackageReference Include="ProphetsWay.Logger" Version="1.3.0" />
+    <PackageReference Include="ProphetsWay.Utilities" Version="1.0.0" />
+    <PackageReference Include="ProphetsWay.Logger" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

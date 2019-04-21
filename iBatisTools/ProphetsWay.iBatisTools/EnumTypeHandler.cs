@@ -1,4 +1,5 @@
 ﻿using IBatisNet.DataMapper.TypeHandlers;
+using ProphetsWay.Utilities;
 
 namespace ProphetsWay.iBatisTools
 {
