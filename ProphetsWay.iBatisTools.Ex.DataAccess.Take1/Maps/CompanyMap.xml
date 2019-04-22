@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Company" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<resultMaps>
+		<resultMap id="CompanyMap" class="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+      <result property="Id" column="Id" />
+      <result property="Name" column="Name" />
+      <result property="Other" column="Other" />
+		</resultMap>
+	</resultMaps>
+
+	<statements>
+    
+		<select id="GetAll">
+			SELECT * FROM Companies
+		</select>
+
+    <select id="CustomFunction" parameterClass="int" resultMap="CompanyMap">
+      
+    </select>
+    
+		<select id="GetCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" resultMap="CompanyMap" extends="GetAll">
+			WHERE Id = #Id#
+		</select>
+
+		<select id="GetCount" resultClass="int" >
+			SELECT COUNT(*)
+			FROM Companies
+		</select>
+
+		<select id="GetPaged" parameterClass="map" resultMap="CompanyMap">
+			SELECT *
+			FROM Companies
+			OFFSET #Offset#
+			ROWS FETCH NEXT #PageSize# ROWS ONLY
+		</select>
+
+		<insert id="InsertCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+			INSERT INTO Companies (
+				Name,
+				Other
+			) VALUES (
+				#Name#,
+				#Other#
+			)
+			<selectKey property="Id" type="post" resultClass="int">
+				SELECT @@Identity as value
+			</selectKey>
+		</insert>
+
+		<update id="UpdateCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+			UPDATE Companies SET
+				Name = #Name#,
+				Other = #Other#
+			WHERE Id = #Id#
+		</update>
+
+		<update id="DeleteCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+			DELETE FROM Companies
+			WHERE Id = #Id#
+		</update>
+
+	</statements>
+
+</sqlMap>

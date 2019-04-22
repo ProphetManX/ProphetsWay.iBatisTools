@@ -40,6 +40,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\provider.xsd" />
+    <None Remove="Assets\providers.config" />
+    <None Remove="Assets\SqlMap.xsd" />
+    <None Remove="Assets\SqlMapConfig.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\provider.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\providers.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SqlMap.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SqlMapConfig.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IBatisNet" Version="1.0.0" />
     <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
     <PackageReference Include="ProphetsWay.Utilities" Version="1.0.0" />
