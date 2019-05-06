@@ -9,7 +9,7 @@
     <None Remove="Maps\CompanyMap.xml" />
     <None Remove="Maps\JobMap.xml" />
     <None Remove="Maps\UserMap.xml" />
-    <None Remove="SqlMap.iBatisTools.Ex.Take1.config" />
+    <None Remove="SqlMap.iBatisTools.Ex.Take2.config" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
     <EmbeddedResource Include="Maps\UserMap.xml" />
     <EmbeddedResource Include="Maps\JobMap.xml" />
     <EmbeddedResource Include="Maps\CompanyMap.xml" />
-    <EmbeddedResource Include="SqlMap.iBatisTools.Ex.Take1.config" />
+    <EmbeddedResource Include="SqlMap.iBatisTools.Ex.Take2.config" />
   </ItemGroup>
 
   <ItemGroup>

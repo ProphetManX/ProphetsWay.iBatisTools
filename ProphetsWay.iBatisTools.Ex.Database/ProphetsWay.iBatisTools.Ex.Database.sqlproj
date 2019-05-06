@@ -60,6 +60,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables\" />
+    <Folder Include="PostBuildScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Companies.sql" />
@@ -68,5 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ProphetsWay.iBatisTools.Ex.Database.publish.xml" />
+    <None Include="PostBuildScripts\CreateUser.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostBuildScripts\PostDeploymentStart.sql" />
   </ItemGroup>
 </Project>

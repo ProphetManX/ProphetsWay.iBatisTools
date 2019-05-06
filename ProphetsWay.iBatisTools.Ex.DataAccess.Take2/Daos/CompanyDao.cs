@@ -2,7 +2,7 @@
 using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
 using ProphetsWay.iBatisTools.Ex.DataAccess.IDaos;
 
-namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take1.Daos
+namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Daos
 {
     internal class CompanyDao : BasePagedDao<Company>, ICompanyDao
     {

@@ -12,12 +12,12 @@
 	<statements>
     
 		<select id="GetAll">
-			SELECT * FROM dbo.Companies
+			SELECT * FROM Companies
 		</select>
 
     <select id="CustomFunction" parameterClass="int" resultMap="CompanyMap">
       SELECT * 
-      FROM dbo.Companies
+      FROM Companies
       WHERE Id = #Id#
     </select>
     
@@ -27,18 +27,18 @@
 
 		<select id="GetCount" resultClass="int" >
 			SELECT COUNT(*)
-			FROM dbo.Companies
+			FROM Companies
 		</select>
 
 		<select id="GetPaged" parameterClass="map" resultMap="CompanyMap">
 			SELECT *
-			FROM dbo.Companies
+			FROM Companies
 			OFFSET #Offset#
 			ROWS FETCH NEXT #PageSize# ROWS ONLY
 		</select>
 
 		<insert id="InsertCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
-			INSERT INTO dbo.Companies (
+			INSERT INTO Companies (
 				Name,
 				Other
 			) VALUES (
@@ -51,14 +51,14 @@
 		</insert>
 
 		<update id="UpdateCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
-			UPDATE dbo.Companies SET
+			UPDATE Companies SET
 				Name = #Name#,
 				Other = #Other#
 			WHERE Id = #Id#
 		</update>
 
 		<update id="DeleteCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
-			DELETE FROM dbo.Companies
+			DELETE FROM Companies
 			WHERE Id = #Id#
 		</update>
 

@@ -12,11 +12,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProphetsWay.iBatisTools.Ex.DataAccess", "ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj", "{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess", "ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj", "{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProphetsWay.iBatisTools.Ex.DataAccess.Take1", "ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj", "{5083B697-4A9E-4B3C-A872-4926BFB99992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess.Take1", "ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj", "{5083B697-4A9E-4B3C-A872-4926BFB99992}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProphetsWay.iBatisTools.Ex.Database", "ProphetsWay.iBatisTools.Ex.Database\ProphetsWay.iBatisTools.Ex.Database.sqlproj", "{14D737E6-A7AB-447D-B87F-7D50ACE36740}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Tests", "ProphetsWay.iBatisTools.Tests\ProphetsWay.iBatisTools.Tests.csproj", "{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess.Take2", "ProphetsWay.iBatisTools.Ex.DataAccess.Take2\ProphetsWay.iBatisTools.Ex.DataAccess.Take2.csproj", "{807C0D7A-9D5A-435F-98B4-EAFEB030A627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess.Take3", "ProphetsWay.iBatisTools.Ex.DataAccess.Take3\ProphetsWay.iBatisTools.Ex.DataAccess.Take3.csproj", "{F802AFB9-46E1-4FAD-8F71-482875466F9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +48,18 @@ Global
 		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.Build.0 = Release|Any CPU
 		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807C0D7A-9D5A-435F-98B4-EAFEB030A627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807C0D7A-9D5A-435F-98B4-EAFEB030A627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807C0D7A-9D5A-435F-98B4-EAFEB030A627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807C0D7A-9D5A-435F-98B4-EAFEB030A627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F802AFB9-46E1-4FAD-8F71-482875466F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F802AFB9-46E1-4FAD-8F71-482875466F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F802AFB9-46E1-4FAD-8F71-482875466F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F802AFB9-46E1-4FAD-8F71-482875466F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
