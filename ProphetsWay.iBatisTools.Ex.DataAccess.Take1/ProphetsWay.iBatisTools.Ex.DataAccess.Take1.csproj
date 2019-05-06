@@ -30,8 +30,5 @@
     <ProjectReference Include="..\ProphetsWay.iBatisTools\ProphetsWay.iBatisTools.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Daos\" />
-  </ItemGroup>
 
 </Project>

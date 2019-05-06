@@ -8,6 +8,8 @@
       <result property="Whatever" column="Whatever" />
       <result property="Company" column="CompanyId"  select="Company.GetCompanyById" />
       <result property="Job" column="JobId"  select="Job.GetJobById" />
+      <result property="RoleStr" column="RoleStr" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Transforms.RoleStrTypeHandler" />
+      <result property="RoleInt" column="RoleInt" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Transforms.RoleIntTypeHandler" />
 		</resultMap>
 	</resultMaps>
 
@@ -40,10 +42,14 @@
 		<insert id="InsertUser" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
 			INSERT INTO Users (
 				Name,
-				Whatever
+				Whatever,
+        RoleStr,
+        RoleInt
 			) VALUES (
 				#Name#,
-				#Whatever#
+				#Whatever#,
+        #RoleStr#,
+        #RoleInt#
 			)
 			<selectKey property="Id" type="post" resultClass="int">
 				SELECT @@Identity as value
@@ -53,7 +59,9 @@
 		<update id="UpdateUser" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
 			UPDATE Users SET
 				Name = #Name#,
-				Whatever = #Whatever#
+				Whatever = #Whatever#,
+        RoleInt = #RoleInt#,
+        RoleStr = #RoleStr#
 			WHERE Id = #Id#
 		</update>
 

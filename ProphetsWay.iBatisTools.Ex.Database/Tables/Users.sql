@@ -4,6 +4,8 @@
     [Whatever]  VARCHAR (MAX) NULL,
     [CompanyId] INT           NULL,
     [JobId]     INT           NULL,
+	[RoleStr] [varchar](50) NOT NULL,
+	[RoleInt] [int] NOT NULL,
     CONSTRAINT [FK_Users_Companies] FOREIGN KEY ([CompanyId]) REFERENCES [dbo].[Companies] ([Id]),
     CONSTRAINT [FK_Users_Jobs] FOREIGN KEY ([JobId]) REFERENCES [dbo].[Jobs] ([Id]), 
     CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([Id])

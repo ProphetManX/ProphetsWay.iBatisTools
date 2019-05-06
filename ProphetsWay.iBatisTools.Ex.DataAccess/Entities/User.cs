@@ -1,4 +1,5 @@
 ﻿using ProphetsWay.BaseDataAccess;
+using ProphetsWay.iBatisTools.Ex.DataAccess.Enums;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Entities
 {
@@ -13,5 +14,9 @@ namespace ProphetsWay.iBatisTools.Ex.DataAccess.Entities
         public Job Job { get; set; }
 
         public string Whatever { get; set; }
+
+        public Roles RoleStr { get; set; }
+
+        public Roles RoleInt { get; set; }
     }
 }
