@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72D6BA31-464A-45F5-A1C6-E09E30D6493A}"
 	ProjectSection(SolutionItems) = preProject
-		..\CHANGELOG.md = ..\CHANGELOG.md
-		..\LICENSE = ..\LICENSE
-		..\README.md = ..\README.md
+		.\CHANGELOG.md = .\CHANGELOG.md
+		.\LICENSE = .\LICENSE
+		.\README.md = .\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess", "ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj", "{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}"
