@@ -4,6 +4,7 @@
     <TargetFrameworks>net45;net451;net452;net46;net461;net471;net472;</TargetFrameworks>
     <RootNamespace>ProphetsWay.iBatisTools</RootNamespace>
     <AssemblyName>ProphetsWay.iBatisTools</AssemblyName>
+    <LangVersion>7.1</LangVersion>
     <ApplicationIcon />
     <Win32Resource />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
