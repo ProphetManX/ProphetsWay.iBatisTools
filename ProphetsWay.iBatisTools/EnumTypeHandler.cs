@@ -20,20 +20,4 @@ namespace ProphetsWay.iBatisTools
 
         public object NullValue => default(T);
     }
-
-    public abstract class EnumTypeAsStringHandler<T> : EnumTypeHandler<T>
-    {
-        public override void SetParameter(IParameterSetter setter, object parameter)
-        {
-            setter.Value = ((T)parameter).ToString();
-        }
-    }
-
-    public abstract class EnumTypeAsIntHandler<T> : EnumTypeHandler<T>
-    {
-        public override void SetParameter(IParameterSetter setter, object parameter)
-        {
-            setter.Value = ((T)parameter).GetHashCode();
-        }
-    }
 }

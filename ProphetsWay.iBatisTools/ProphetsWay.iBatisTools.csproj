@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net451;net452;net46;net461;net471;netstandard2.0;netcoreapp2.2;netcoreapp2.1;netcoreapp2;</TargetFrameworks>
+    <TargetFrameworks>net45;net451;net452;net46;net461;net471;net472;</TargetFrameworks>
     <RootNamespace>ProphetsWay.iBatisTools</RootNamespace>
     <AssemblyName>ProphetsWay.iBatisTools</AssemblyName>
+    <LangVersion>7.1</LangVersion>
     <ApplicationIcon />
     <Win32Resource />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -38,6 +39,28 @@
     <InformationalVersion />
 
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\provider.xsd" />
+    <None Remove="Assets\providers.config" />
+    <None Remove="Assets\SqlMap.xsd" />
+    <None Remove="Assets\SqlMapConfig.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\provider.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\providers.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SqlMap.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SqlMapConfig.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="IBatisNet" Version="1.0.0" />

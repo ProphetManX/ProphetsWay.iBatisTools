@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Config\providers.config" />
+    <None Remove="Maps\CompanyMap.xml" />
+    <None Remove="Maps\JobMap.xml" />
+    <None Remove="Maps\UserMap.xml" />
+    <None Remove="SqlMap.iBatisTools.Ex.Take1.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Config\providers.config" />
+    <EmbeddedResource Include="Maps\UserMap.xml" />
+    <EmbeddedResource Include="Maps\JobMap.xml" />
+    <EmbeddedResource Include="Maps\CompanyMap.xml" />
+    <EmbeddedResource Include="SqlMap.iBatisTools.Ex.Take1.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IBatisNet" Version="1.0.0" />
+    <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj" />
+    <ProjectReference Include="..\ProphetsWay.iBatisTools\ProphetsWay.iBatisTools.csproj" />
+  </ItemGroup>
+
+
+</Project>

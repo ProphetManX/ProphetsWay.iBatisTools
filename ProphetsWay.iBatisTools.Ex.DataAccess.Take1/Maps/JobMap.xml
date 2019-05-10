@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Job" xmlns="http://ibatis.apache.org/mapping"    xsi:noNamespaceSchemaLocation="..\xsd\SqlMap.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<resultMaps>
+		<resultMap id="JobMap" class="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+      <result property="Id" column="Id" />
+      <result property="Name" column="Name" />
+      <result property="Something" column="Something" />
+		</resultMap>
+	</resultMaps>
+
+	<statements>
+    
+		<select id="GetAll">
+			SELECT * FROM Jobs
+		</select>
+
+		<select id="GetJobById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job" resultMap="JobMap" extends="GetAll">
+			WHERE Id = #Id#
+		</select>
+
+		<insert id="InsertJob" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+			INSERT INTO Companies (
+				Name,
+				Something
+			) VALUES (
+				#Name#,
+				#Something#
+			)
+			<selectKey property="Id" type="post" resultClass="int">
+				SELECT @@Identity as value
+			</selectKey>
+		</insert>
+
+		<update id="UpdateJob" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+			UPDATE Jobs SET
+				Name = #Name#,
+				Something = #Something#
+			WHERE Id = #Id#
+		</update>
+
+		<update id="DeleteJobById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+			DELETE FROM Jobs
+			WHERE Id = #Id#
+		</update>
+
+	</statements>
+
+</sqlMap>
