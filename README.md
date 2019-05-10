@@ -216,6 +216,8 @@ For working examples of how all these parts work, please see the example project
 
 The library has 9 unit tests currently.  I only covered code that exercises the iBatisTools functionality.
 They are created with an XUnit test project, as well as Example projects with differing iBatis SqlMap.config setups.
+Unfortunately I don't have the unit tests running in the build pipeline because they are actually
+hitting my local database to run.
 
 
 ## Versioning
