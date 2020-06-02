@@ -4,15 +4,8 @@ using ProphetsWay.Example.DataAccess;
 
 namespace ProphetsWay.iBatisTools.Tests
 {
-    [Collection("Uses Logger")]
     public class MapperFactoryTests
     {
-        public MapperFactoryTests()
-        {
-            //Logger.AddDestination(new ConsoleDestination());
-        }
-
-
         [Fact]
         public void GenerateMapperOnAssemblyTest()
         {

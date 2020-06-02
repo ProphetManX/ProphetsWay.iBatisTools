@@ -1,68 +1,20 @@
-using ProphetsWay.Example.DataAccess.Entities;
-using FluentAssert;
-using Xunit;
-using ProphetsWay.Example.DataAccess.Enums;
+using ProphetsWay.Example.Tests;
+using ProphetsWay.Example.DataAccess.IDaos;
 
 namespace ProphetsWay.iBatisTools.Tests
 {
-    [Collection("Uses Logger")]
-    public class UserDaoTests
+    public class Take1UserDaoTests : UserDaoTests
     {
-        [Theory]
-        [InlineData(ObjectFactory.DataAccessTypes.Take1)]
-        [InlineData(ObjectFactory.DataAccessTypes.Take2)]
-        [InlineData(ObjectFactory.DataAccessTypes.Take3)]
-        public void ExerciseUserCRUD(ObjectFactory.DataAccessTypes type)
-        {
-            var db = ObjectFactory.GetDataAccess(type);
+        protected override IUserDao GetIExampleDataAccess => ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take1);
+    }
 
-            var co = ObjectFactory.Get<User>();
-            co.RoleInt = Roles.Admin;
-            co.RoleStr = co.RoleInt;
-            co.Id.ShouldBeEqualTo(default);
+    public class Take2UserDaoTests : UserDaoTests
+    {
+        protected override IUserDao GetIExampleDataAccess => ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take2);
+    }
 
-            //Create/Insert
-            db.Insert(co);
-            co.Id.ShouldNotBeEqualTo(default);
-
-            //Read/Get
-            var co2 = db.Get(co);
-            co2.ShouldNotBeNull();
-            co2.Id.ShouldBeEqualTo(co.Id);
-            co2.Name.ShouldBeEqualTo(co.Name);
-            co2.Whatever.ShouldBeEqualTo(co.Whatever);
-            co2.RoleInt.ShouldBeEqualTo(co.RoleInt);
-            co2.RoleStr.ShouldBeEqualTo(co.RoleStr);
-
-            var newCo = ObjectFactory.Get<User>();
-            newCo.Name.ShouldNotBeEqualTo(co.Name);
-            newCo.Whatever.ShouldNotBeEqualTo(co.Whatever);
-            newCo.RoleInt = Roles.Developer;
-            newCo.RoleStr = co.RoleInt;
-
-            co.Name = newCo.Name;
-            co.Whatever = newCo.Whatever;
-            co.RoleInt = newCo.RoleInt;
-            co.RoleStr = newCo.RoleStr;
-
-
-            //Update
-            var uCount = db.Update(co);
-            uCount.ShouldBeEqualTo(1);
-
-            var co3 = db.Get(co);
-            co3.Id.ShouldBeEqualTo(co.Id);
-            co3.Name.ShouldBeEqualTo(newCo.Name);
-            co3.Whatever.ShouldBeEqualTo(newCo.Whatever);
-            co3.RoleInt.ShouldBeEqualTo(newCo.RoleInt);
-            co3.RoleStr.ShouldBeEqualTo(newCo.RoleStr);
-
-            //Delete
-            var dCount = db.Delete(co);
-            dCount.ShouldBeEqualTo(1);
-
-            var co4 = db.Get(co);
-            co4.ShouldBeNull();
-        }
+    public class Take3UserDaoTests : UserDaoTests
+    {
+        protected override IUserDao GetIExampleDataAccess => ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take3);
     }
 }

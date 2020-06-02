@@ -9,13 +9,14 @@
   <ItemGroup>
     <PackageReference Include="FluentAssert" Version="1.0.0.11" />
     <PackageReference Include="IBatisNet" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.DataAccess\ProphetsWay.Example.DataAccess.csproj" />
+    <ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.Tests\ProphetsWay.Example.Tests.csproj" />
     <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj" />
     <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take2\ProphetsWay.iBatisTools.Ex.DataAccess.Take2.csproj" />
     <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take3\ProphetsWay.iBatisTools.Ex.DataAccess.Take3.csproj" />
