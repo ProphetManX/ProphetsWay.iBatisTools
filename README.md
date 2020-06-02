@@ -151,19 +151,19 @@ Examples:
 <!-- complete connection information -->
 <database>
 	<provider name="sqlServer2008"/>
-	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False"/>
+	<dataSource name="ProphetsWay.Example" connectionString="Initial Catalog=ProphetsWay.Example;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False"/>
 </database>
 
 <!-- whole connection string replacement -->
 <database>
 	<provider name="sqlServer2008"/>
-	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="${connectionString}"/>
+	<dataSource name="ProphetsWay.Example" connectionString="${connectionString}"/>
 </database>
 
 <!-- specific value/variable replacement -->
 <database>
 	<provider name="sqlServer2008"/>
-	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;user id=${username};password=${password};Connection Timeout=60;Max Pool Size=1000"/>
+	<dataSource name="ProphetsWay.Example" connectionString="Initial Catalog=ProphetsWay.Example;Data Source=localhost;user id=${username};password=${password};Connection Timeout=60;Max Pool Size=1000"/>
 </database>
 ```
 
