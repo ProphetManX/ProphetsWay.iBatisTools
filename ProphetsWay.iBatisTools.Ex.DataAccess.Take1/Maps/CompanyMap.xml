@@ -33,6 +33,7 @@
 		<select id="GetPaged" parameterClass="map" resultMap="CompanyMap">
 			SELECT *
 			FROM dbo.Companies
+			ORDER BY Id
 			OFFSET #Offset#
 			ROWS FETCH NEXT #PageSize# ROWS ONLY
 		</select>

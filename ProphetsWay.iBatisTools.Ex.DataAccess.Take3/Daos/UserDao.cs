@@ -14,7 +14,8 @@ namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Daos
 
         public void CustomUserFunctionality(User user)
         {
-            throw new System.NotImplementedException();
+            user.Whatever = "custom functionality triggered";
+            Update(user);
         }
     }
 }

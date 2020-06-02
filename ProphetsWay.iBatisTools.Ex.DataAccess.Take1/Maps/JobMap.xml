@@ -11,7 +11,7 @@
 
 	<statements>
 	
-		<select id="GetAll">
+		<select id="GetAll" resultMap="JobMap">
 			SELECT * FROM Jobs
 		</select>
 
@@ -20,7 +20,7 @@
 		</select>
 
 		<insert id="InsertJob" parameterClass="ProphetsWay.Example.DataAccess.Entities.Job">
-			INSERT INTO Companies (
+			INSERT INTO Jobs (
 				Name,
 				Something
 			) VALUES (
