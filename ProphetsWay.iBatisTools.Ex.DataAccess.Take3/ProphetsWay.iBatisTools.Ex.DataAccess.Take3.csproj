@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <PackageReference Include="IBatisNet" Version="1.0.0" />
-    <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
+    <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
