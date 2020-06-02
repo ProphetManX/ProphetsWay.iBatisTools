@@ -48,8 +48,6 @@ namespace ProphetsWay.iBatisTools
         {
             var assemblyName = callingAssembly.ManifestModule.Name;
 
-            Logger.Debug($"Generating an ISqlMapper for {assemblyName}");
-
             var builder = new DomSqlMapBuilder { ValidateSqlMapConfig = true, Properties = builderProperties };
             var resources = callingAssembly.GetManifestResourceNames();
 
@@ -60,10 +58,8 @@ namespace ProphetsWay.iBatisTools
 
                 return mapper;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Logger.Error(ex, $"There was a problem when generating the SqlMapper for {assemblyName}");
-
                 throw;
             }
         }
