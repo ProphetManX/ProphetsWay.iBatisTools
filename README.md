@@ -1,11 +1,8 @@
 # ProphetsWay.iBatisTools
 
-| Release   | Status |
-|   ---     |  ---   |
-| Latest Build: | [![Build status](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_apis/build/status/iBatisTools/iBatisTools%20CI)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_build/latest?definitionId=12)
-| Alpha:    | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/15)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7)
-| Beta:     | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/16)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7)
-| Release:  | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/17)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7)
+| Master Build Status | NuGet Alpha | NuGet Beta | Nuget Release |
+|   ---   |   ---   |   ---   |   ---   |
+| [![Build status](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_apis/build/status/iBatisTools/iBatisTools%20CI)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_build/latest?definitionId=12) | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/15)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7) | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/16)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7) | [![Build status](https://vsrm.dev.azure.com/ProphetsWay/_apis/public/Release/badge/dadb23ce-840b-4b7d-9783-dc5e9a2d9029/7/17)](https://dev.azure.com/ProphetsWay/ProphetsWay%20GitHub%20Projects/_release?definitionId=7)
 
 
 A small library that will help with using iBatisNet as your DAL
@@ -52,10 +49,10 @@ you will need to have four specifically named queries created.
 ```
 When setup as per the previous example entity ```Company```
 ``` xml
-<select id="GetCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<insert id="InsertCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<update id="UpdateCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<update id="DeleteCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
+<select id="GetCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<insert id="InsertCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<update id="UpdateCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<update id="DeleteCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
 ```
 
 You will still need to manually write the queries however you want, but you will get the whole entity as your parameter object.
@@ -101,6 +98,7 @@ from above:
 <select id="GetPaged" parameterClass="map" resultMap="CompanyMap">
 	SELECT *
 	FROM dbo.Companies
+	ORDER BY Id
 	OFFSET #Offset#
 	ROWS FETCH NEXT #PageSize# ROWS ONLY
 </select>
@@ -118,9 +116,9 @@ as the generic value for T.  For example, I have the following enum and type han
 //roles as an enum is defined within my DataAccess project along with all my entity models
 public enum Roles
 {
-    Admin,
-    User,
-    Developer
+	Admin,
+	User,
+	Developer
 }
 
 //RoleHandler is defined within my iBatis DAL project 
@@ -152,20 +150,20 @@ Examples:
 ``` xml
 <!-- complete connection information -->
 <database>
-    <provider name="sqlServer2008"/>
-    <dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False"/>
+	<provider name="sqlServer2008"/>
+	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False"/>
 </database>
 
 <!-- whole connection string replacement -->
 <database>
-    <provider name="sqlServer2008"/>
-    <dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="${connectionString}"/>
+	<provider name="sqlServer2008"/>
+	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="${connectionString}"/>
 </database>
 
 <!-- specific value/variable replacement -->
 <database>
-    <provider name="sqlServer2008"/>
-    <dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;user id=${username};password=${password};Connection Timeout=60;Max Pool Size=1000"/>
+	<provider name="sqlServer2008"/>
+	<dataSource name="ProphetsWay.iBatisTools.Ex.Database" connectionString="Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;user id=${username};password=${password};Connection Timeout=60;Max Pool Size=1000"/>
 </database>
 ```
 
@@ -178,36 +176,36 @@ Lastly is an example of how you'd invoke each of those examples above.
 ``` c#
 public ExDataAccessTake1()
 {
-    _mapper = GetType().Assembly.GenerateMapper();
-    _companyDao = new CompanyDao(_mapper);
-    _jobDao = new JobDao(_mapper);
-    _userDao = new UserDao(_mapper);
+	_mapper = GetType().Assembly.GenerateMapper();
+	_companyDao = new CompanyDao(_mapper);
+	_jobDao = new JobDao(_mapper);
+	_userDao = new UserDao(_mapper);
 }
 
 public ExDataAccessTake2(string connString)
 {
-    _mapper = GetType().Assembly.GenerateMapper(connString);
-    _companyDao = new CompanyDao(_mapper);
-    _jobDao = new JobDao(_mapper);
-    _userDao = new UserDao(_mapper);
+	_mapper = GetType().Assembly.GenerateMapper(connString);
+	_companyDao = new CompanyDao(_mapper);
+	_jobDao = new JobDao(_mapper);
+	_userDao = new UserDao(_mapper);
 }
 
 public ExDataAccessTake3(string userName, string userPass)
 {
-    //I recommend creating the name value collection within this project
-    //so that you can verify the "keys" match the variables used within your
-    //SqlMap.config file.
-    //If you choose to use more/many/different variables, just make sure
-    //you require them in your constructor here, and pass them all into your 
-    //NameValueCollection before calling GenerateMapper.
-    var coll = new NameValueCollection();
-    coll.Add("username", userName);
-    coll.Add("password", userPass);
+	//I recommend creating the name value collection within this project
+	//so that you can verify the "keys" match the variables used within your
+	//SqlMap.config file.
+	//If you choose to use more/many/different variables, just make sure
+	//you require them in your constructor here, and pass them all into your 
+	//NameValueCollection before calling GenerateMapper.
+	var coll = new NameValueCollection();
+	coll.Add("username", userName);
+	coll.Add("password", userPass);
 
-    _mapper = GetType().Assembly.GenerateMapper(coll);
-    _companyDao = new CompanyDao(_mapper);
-    _jobDao = new JobDao(_mapper);
-    _userDao = new UserDao(_mapper);
+	_mapper = GetType().Assembly.GenerateMapper(coll);
+	_companyDao = new CompanyDao(_mapper);
+	_jobDao = new JobDao(_mapper);
+	_userDao = new UserDao(_mapper);
 }
 ```
 
@@ -223,7 +221,8 @@ For working examples of how all these parts work, please see the example project
 
 ## Running the tests
 
-The library has 9 unit tests currently.  I only covered code that exercises the iBatisTools functionality.
+The library has 66 basic unit tests, exercising each 'Take' that was implemented; and the tests are executed against all 
+target frameworks in the test project.  They cover the iBatis specific functionality as well as excercise all the Daos.
 They are created with an XUnit test project, as well as Example projects with differing iBatis SqlMap.config setups.
 Unfortunately I don't have the unit tests running in the build pipeline because they are actually
 hitting my local database to run.

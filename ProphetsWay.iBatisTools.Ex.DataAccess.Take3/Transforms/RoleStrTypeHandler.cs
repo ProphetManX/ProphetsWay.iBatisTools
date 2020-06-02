@@ -1,4 +1,4 @@
-﻿using ProphetsWay.iBatisTools.Ex.DataAccess.Enums;
+﻿using ProphetsWay.Example.DataAccess.Enums;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Transforms
 {

@@ -1,20 +1,20 @@
 ﻿using IBatisNet.DataMapper;
-using ProphetsWay.iBatisTools;
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
-using ProphetsWay.iBatisTools.Ex.DataAccess.IDaos;
+using ProphetsWay.Example.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.IDaos;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take1.Daos
 {
-    internal class UserDao : BaseDao<User>, IUserDao
-    {
-        public UserDao(ISqlMapper mapper) : base(mapper)
-        {
+	internal class UserDao : BaseDao<User>, IUserDao
+	{
+		public UserDao(ISqlMapper mapper) : base(mapper)
+		{
 
-        }
+		}
 
-        public void CustomUserFunctionality(User user)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+		public void CustomUserFunctionality(User user)
+		{
+			user.Whatever = "custom functionality triggered";
+			Update(user);
+		}
+	}
 }

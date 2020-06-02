@@ -1,7 +1,7 @@
 ﻿using IBatisNet.DataMapper;
 using ProphetsWay.iBatisTools;
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
-using ProphetsWay.iBatisTools.Ex.DataAccess.IDaos;
+using ProphetsWay.Example.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.IDaos;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Daos
 {
@@ -14,7 +14,8 @@ namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take3.Daos
 
         public void CustomUserFunctionality(User user)
         {
-            throw new System.NotImplementedException();
+            user.Whatever = "custom functionality triggered";
+            Update(user);
         }
     }
 }

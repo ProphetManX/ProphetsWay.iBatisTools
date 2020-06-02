@@ -1,22 +1,15 @@
-using ProphetsWay.iBatisTools.Ex.DataAccess;
 using Xunit;
 using FluentAssert;
+using ProphetsWay.Example.DataAccess;
 
 namespace ProphetsWay.iBatisTools.Tests
 {
-    [Collection("Uses Logger")]
     public class MapperFactoryTests
     {
-        public MapperFactoryTests()
-        {
-            //Logger.AddDestination(new ConsoleDestination());
-        }
-
-
         [Fact]
         public void GenerateMapperOnAssemblyTest()
         {
-            IExDataAccess db;
+            IExampleDataAccess db;
             db = ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take1);
 
             db.ShouldNotBeNull();
@@ -25,7 +18,7 @@ namespace ProphetsWay.iBatisTools.Tests
         [Fact]
         public void GenerateMapperWithConnectionString()
         {
-            IExDataAccess db;
+            IExampleDataAccess db;
             db = ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take2);
 
             db.ShouldNotBeNull();
@@ -34,7 +27,7 @@ namespace ProphetsWay.iBatisTools.Tests
         [Fact]
         public void GenerateMapperWithValues()
         {
-            IExDataAccess db;
+            IExampleDataAccess db;
             db = ObjectFactory.GetDataAccess(ObjectFactory.DataAccessTypes.Take3);
 
             db.ShouldNotBeNull();

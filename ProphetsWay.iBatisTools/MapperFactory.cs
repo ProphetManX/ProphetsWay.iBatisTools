@@ -1,6 +1,5 @@
 ﻿using IBatisNet.DataMapper;
 using IBatisNet.DataMapper.Configuration;
-using ProphetsWay.Utilities;
 using System;
 using System.Collections.Specialized;
 using System.Linq;
@@ -48,8 +47,6 @@ namespace ProphetsWay.iBatisTools
         {
             var assemblyName = callingAssembly.ManifestModule.Name;
 
-            Logger.Debug($"Generating an ISqlMapper for {assemblyName}");
-
             var builder = new DomSqlMapBuilder { ValidateSqlMapConfig = true, Properties = builderProperties };
             var resources = callingAssembly.GetManifestResourceNames();
 
@@ -62,9 +59,7 @@ namespace ProphetsWay.iBatisTools
             }
             catch (Exception ex)
             {
-                Logger.Error(ex, $"There was a problem when generating the SqlMapper for {assemblyName}");
-
-                throw;
+                throw new Exception($"There was a problem when generating the SqlMapper for {assemblyName}.  See inner exception for details.", ex);
             }
         }
     }

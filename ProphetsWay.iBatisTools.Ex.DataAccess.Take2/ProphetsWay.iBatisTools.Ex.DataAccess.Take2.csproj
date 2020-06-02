@@ -1,33 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net45;net451;net452;net46;net461;net471;netstandard2.0;netstandard2.1;netcoreapp2.2;netcoreapp2.1;netcoreapp2.0;netcoreapp3.0;netcoreapp3.1;</TargetFrameworks>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Config\providers.config" />
-    <None Remove="Maps\CompanyMap.xml" />
-    <None Remove="Maps\JobMap.xml" />
-    <None Remove="Maps\UserMap.xml" />
-    <None Remove="SqlMap.iBatisTools.Ex.Take2.config" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Config\providers.config" />
+		<None Remove="Maps\CompanyMap.xml" />
+		<None Remove="Maps\JobMap.xml" />
+		<None Remove="Maps\UserMap.xml" />
+		<None Remove="SqlMap.iBatisTools.Ex.Take2.config" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="Config\providers.config" />
-    <EmbeddedResource Include="Maps\UserMap.xml" />
-    <EmbeddedResource Include="Maps\JobMap.xml" />
-    <EmbeddedResource Include="Maps\CompanyMap.xml" />
-    <EmbeddedResource Include="SqlMap.iBatisTools.Ex.Take2.config" />
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Config\providers.config" />
+		<EmbeddedResource Include="Maps\UserMap.xml" />
+		<EmbeddedResource Include="Maps\JobMap.xml" />
+		<EmbeddedResource Include="Maps\CompanyMap.xml" />
+		<EmbeddedResource Include="SqlMap.iBatisTools.Ex.Take2.config" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="IBatisNet" Version="1.0.0" />
-    <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="IBatisNet" Version="1.0.0" />
+		<PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.1.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj" />
-    <ProjectReference Include="..\ProphetsWay.iBatisTools\ProphetsWay.iBatisTools.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.DataAccess\ProphetsWay.Example.DataAccess.csproj" />
+		<ProjectReference Include="..\ProphetsWay.iBatisTools\ProphetsWay.iBatisTools.csproj" />
+	</ItemGroup>
 
 </Project>
