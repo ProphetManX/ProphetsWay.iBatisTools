@@ -1,25 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <LangVersion>7.1</LangVersion>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net452;net46;net461;net471;net472;net48;</TargetFrameworks>
+		<LangVersion>7.1</LangVersion>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FluentAssert" Version="1.0.0.11" />
-    <PackageReference Include="IBatisNet" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="xunit" Version="2.4.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentAssert" Version="1.0.0.11" />
+		<PackageReference Include="IBatisNet" Version="1.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+		<PackageReference Include="xunit" Version="2.4.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.DataAccess\ProphetsWay.Example.DataAccess.csproj" />
-    <ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.Tests\ProphetsWay.Example.Tests.csproj" />
-    <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj" />
-    <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take2\ProphetsWay.iBatisTools.Ex.DataAccess.Take2.csproj" />
-    <ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take3\ProphetsWay.iBatisTools.Ex.DataAccess.Take3.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.DataAccess\ProphetsWay.Example.DataAccess.csproj" />
+		<ProjectReference Include="..\ProphetsWay.Example\ProphetsWay.Example.Tests\ProphetsWay.Example.Tests.csproj" />
+		<ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj" />
+		<ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take2\ProphetsWay.iBatisTools.Ex.DataAccess.Take2.csproj" />
+		<ProjectReference Include="..\ProphetsWay.iBatisTools.Ex.DataAccess.Take3\ProphetsWay.iBatisTools.Ex.DataAccess.Take3.csproj" />
+	</ItemGroup>
 
 </Project>
