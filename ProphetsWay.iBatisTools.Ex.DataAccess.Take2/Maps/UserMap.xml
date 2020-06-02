@@ -2,28 +2,28 @@
 <sqlMap namespace="User" xmlns="http://ibatis.apache.org/mapping"   xsi:noNamespaceSchemaLocation="..\xsd\SqlMap.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<resultMaps>
-		<resultMap id="UserMap" class="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
-      <result property="Id" column="Id" />
-      <result property="Name" column="Name" />
-      <result property="Whatever" column="Whatever" />
-      <result property="Company" column="CompanyId"  select="Company.GetCompanyById" />
-      <result property="Job" column="JobId"  select="Job.GetJobById" />
-      <result property="RoleStr" column="RoleStr" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Transforms.RoleStrTypeHandler" />
-      <result property="RoleInt" column="RoleInt" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Transforms.RoleIntTypeHandler" />
+		<resultMap id="UserMap" class="ProphetsWay.Example.DataAccess.Entities.User">
+			<result property="Id" column="Id" />
+			<result property="Name" column="Name" />
+			<result property="Whatever" column="Whatever" />
+			<result property="Company" column="CompanyId"  select="Company.GetCompanyById" />
+			<result property="Job" column="JobId"  select="Job.GetJobById" />
+			<result property="RoleStr" column="RoleStr" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Transforms.RoleStrTypeHandler" />
+			<result property="RoleInt" column="RoleInt" typeHandler="ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Transforms.RoleIntTypeHandler" />
 		</resultMap>
 	</resultMaps>
 
 	<statements>
-    
+	
 		<select id="GetAll">
 			SELECT * FROM Users
 		</select>
 
-    <select id="CustomUserFunctionality" parameterClass="int" resultMap="UserMap">
-      
-    </select>
-    
-		<select id="GetUserById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User" resultMap="UserMap" extends="GetAll">
+		<select id="CustomUserFunctionality" parameterClass="int" resultMap="UserMap">
+	  
+		</select>
+	
+		<select id="GetUserById" parameterClass="ProphetsWay.Example.DataAccess.Entities.User" resultMap="UserMap" extends="GetAll">
 			WHERE Id = #Id#
 		</select>
 
@@ -39,33 +39,33 @@
 			ROWS FETCH NEXT #PageSize# ROWS ONLY
 		</select>
 
-		<insert id="InsertUser" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
+		<insert id="InsertUser" parameterClass="ProphetsWay.Example.DataAccess.Entities.User">
 			INSERT INTO Users (
 				Name,
 				Whatever,
-        RoleStr,
-        RoleInt
+				RoleStr,
+				RoleInt
 			) VALUES (
 				#Name#,
 				#Whatever#,
-        #RoleStr#,
-        #RoleInt#
+				#RoleStr#,
+				#RoleInt#
 			)
 			<selectKey property="Id" type="post" resultClass="int">
 				SELECT @@Identity as value
 			</selectKey>
 		</insert>
 
-		<update id="UpdateUser" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
+		<update id="UpdateUser" parameterClass="ProphetsWay.Example.DataAccess.Entities.User">
 			UPDATE Users SET
 				Name = #Name#,
 				Whatever = #Whatever#,
-        RoleInt = #RoleInt#,
-        RoleStr = #RoleStr#
+				RoleInt = #RoleInt#,
+				RoleStr = #RoleStr#
 			WHERE Id = #Id#
 		</update>
 
-		<update id="DeleteUserById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.User">
+		<update id="DeleteUserById" parameterClass="ProphetsWay.Example.DataAccess.Entities.User">
 			DELETE FROM Users
 			WHERE Id = #Id#
 		</update>

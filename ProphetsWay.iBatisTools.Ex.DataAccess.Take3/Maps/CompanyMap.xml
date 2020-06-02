@@ -2,26 +2,26 @@
 <sqlMap namespace="Company" xmlns="http://ibatis.apache.org/mapping"   xsi:noNamespaceSchemaLocation="..\xsd\SqlMap.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<resultMaps>
-		<resultMap id="CompanyMap" class="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
-      <result property="Id" column="Id" />
-      <result property="Name" column="Name" />
-      <result property="Other" column="Other" />
+		<resultMap id="CompanyMap" class="ProphetsWay.Example.DataAccess.Entities.Company">
+			<result property="Id" column="Id" />
+			<result property="Name" column="Name" />
+			<result property="Other" column="Other" />
 		</resultMap>
 	</resultMaps>
 
 	<statements>
-    
+	
 		<select id="GetAll">
 			SELECT * FROM Companies
 		</select>
 
-    <select id="CustomFunction" parameterClass="int" resultMap="CompanyMap">
-      SELECT * 
-      FROM Companies
-      WHERE Id = #Id#
-    </select>
-    
-		<select id="GetCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" resultMap="CompanyMap" extends="GetAll">
+		<select id="CustomFunction" parameterClass="int" resultMap="CompanyMap">
+			SELECT * 
+			FROM Companies
+			WHERE Id = #Id#
+		</select>
+	
+		<select id="GetCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" resultMap="CompanyMap" extends="GetAll">
 			WHERE Id = #Id#
 		</select>
 
@@ -37,7 +37,7 @@
 			ROWS FETCH NEXT #PageSize# ROWS ONLY
 		</select>
 
-		<insert id="InsertCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+		<insert id="InsertCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company">
 			INSERT INTO Companies (
 				Name,
 				Other
@@ -50,14 +50,14 @@
 			</selectKey>
 		</insert>
 
-		<update id="UpdateCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+		<update id="UpdateCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company">
 			UPDATE Companies SET
 				Name = #Name#,
 				Other = #Other#
 			WHERE Id = #Id#
 		</update>
 
-		<update id="DeleteCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company">
+		<update id="DeleteCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company">
 			DELETE FROM Companies
 			WHERE Id = #Id#
 		</update>

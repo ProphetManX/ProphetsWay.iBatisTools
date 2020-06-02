@@ -2,24 +2,24 @@
 <sqlMap namespace="Job" xmlns="http://ibatis.apache.org/mapping"    xsi:noNamespaceSchemaLocation="..\xsd\SqlMap.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<resultMaps>
-		<resultMap id="JobMap" class="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
-      <result property="Id" column="Id" />
-      <result property="Name" column="Name" />
-      <result property="Something" column="Something" />
+		<resultMap id="JobMap" class="ProphetsWay.Example.DataAccess.Entities.Job">
+			<result property="Id" column="Id" />
+			<result property="Name" column="Name" />
+			<result property="Something" column="Something" />
 		</resultMap>
 	</resultMaps>
 
 	<statements>
-    
+	
 		<select id="GetAll">
 			SELECT * FROM Jobs
 		</select>
 
-		<select id="GetJobById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job" resultMap="JobMap" extends="GetAll">
+		<select id="GetJobById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Job" resultMap="JobMap" extends="GetAll">
 			WHERE Id = #Id#
 		</select>
 
-		<insert id="InsertJob" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+		<insert id="InsertJob" parameterClass="ProphetsWay.Example.DataAccess.Entities.Job">
 			INSERT INTO Companies (
 				Name,
 				Something
@@ -32,14 +32,14 @@
 			</selectKey>
 		</insert>
 
-		<update id="UpdateJob" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+		<update id="UpdateJob" parameterClass="ProphetsWay.Example.DataAccess.Entities.Job">
 			UPDATE Jobs SET
 				Name = #Name#,
 				Something = #Something#
 			WHERE Id = #Id#
 		</update>
 
-		<update id="DeleteJobById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Job">
+		<update id="DeleteJobById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Job">
 			DELETE FROM Jobs
 			WHERE Id = #Id#
 		</update>
