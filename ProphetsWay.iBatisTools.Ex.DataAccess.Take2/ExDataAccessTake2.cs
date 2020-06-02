@@ -1,13 +1,14 @@
 ﻿using ProphetsWay.BaseDataAccess;
-using ProphetsWay.iBatisTools.Ex.DataAccess.IDaos;
+using ProphetsWay.Example.DataAccess.IDaos;
 using ProphetsWay.iBatisTools.Ex.DataAccess.Take2.Daos;
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.Entities;
 using System.Collections.Generic;
 using IBatisNet.DataMapper;
+using ProphetsWay.Example.DataAccess;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take2
 {
-    public class ExDataAccessTake2 : BaseDataAccessInt, IExDataAccess
+    public class ExDataAccessTake2 : BaseDataAccess<int>, IExampleDataAccess
     {
         private readonly ISqlMapper _mapper;
         private readonly ICompanyDao _companyDao;
