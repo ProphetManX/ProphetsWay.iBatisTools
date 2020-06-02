@@ -1,6 +1,6 @@
 ﻿using IBatisNet.DataMapper;
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
-using ProphetsWay.iBatisTools.Ex.DataAccess.IDaos;
+using ProphetsWay.Example.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.IDaos;
 
 namespace ProphetsWay.iBatisTools.Ex.DataAccess.Take1.Daos
 {
