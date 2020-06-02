@@ -1,4 +1,4 @@
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.Entities;
 using FluentAssert;
 using Xunit;
 

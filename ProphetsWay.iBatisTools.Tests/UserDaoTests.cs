@@ -1,6 +1,7 @@
-using ProphetsWay.iBatisTools.Ex.DataAccess.Entities;
+using ProphetsWay.Example.DataAccess.Entities;
 using FluentAssert;
 using Xunit;
+using ProphetsWay.Example.DataAccess.Enums;
 
 namespace ProphetsWay.iBatisTools.Tests
 {
@@ -16,7 +17,7 @@ namespace ProphetsWay.iBatisTools.Tests
             var db = ObjectFactory.GetDataAccess(type);
 
             var co = ObjectFactory.Get<User>();
-            co.RoleInt = Ex.DataAccess.Enums.Roles.Admin;
+            co.RoleInt = Roles.Admin;
             co.RoleStr = co.RoleInt;
             co.Id.ShouldBeEqualTo(default);
 
@@ -36,7 +37,7 @@ namespace ProphetsWay.iBatisTools.Tests
             var newCo = ObjectFactory.Get<User>();
             newCo.Name.ShouldNotBeEqualTo(co.Name);
             newCo.Whatever.ShouldNotBeEqualTo(co.Whatever);
-            newCo.RoleInt = Ex.DataAccess.Enums.Roles.Developer;
+            newCo.RoleInt = Roles.Developer;
             newCo.RoleStr = co.RoleInt;
 
             co.Name = newCo.Name;

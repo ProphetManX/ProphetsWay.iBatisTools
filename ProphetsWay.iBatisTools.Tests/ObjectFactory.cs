@@ -1,4 +1,4 @@
-﻿using ProphetsWay.iBatisTools.Ex.DataAccess;
+﻿using ProphetsWay.Example.DataAccess;
 using ProphetsWay.iBatisTools.Ex.DataAccess.Take1;
 using ProphetsWay.iBatisTools.Ex.DataAccess.Take2;
 using ProphetsWay.iBatisTools.Ex.DataAccess.Take3;
@@ -19,9 +19,9 @@ namespace ProphetsWay.iBatisTools.Tests
             Take3
         }
 
-        public static IExDataAccess GetDataAccess(DataAccessTypes type)
+        public static IExampleDataAccess GetDataAccess(DataAccessTypes type)
         {
-            const string connString = "Initial Catalog=ProphetsWay.iBatisTools.Ex.Database;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False";
+            const string connString = "Initial Catalog=ProphetsWay.Example;Data Source=localhost;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False";
             const string userName = "testUser";
             const string userPass = "testUser1!";
 
