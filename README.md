@@ -221,7 +221,8 @@ For working examples of how all these parts work, please see the example project
 
 ## Running the tests
 
-The library has 66 unit tests currently.  They cover the iBatis specific functionality as well as excercise all the Daos.
+The library has 66 basic unit tests, exercising each 'Take' that was implemented; and the tests are executed against all 
+target frameworks in the test project.  They cover the iBatis specific functionality as well as excercise all the Daos.
 They are created with an XUnit test project, as well as Example projects with differing iBatis SqlMap.config setups.
 Unfortunately I don't have the unit tests running in the build pipeline because they are actually
 hitting my local database to run.
