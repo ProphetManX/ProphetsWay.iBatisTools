@@ -12,11 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess", "ProphetsWay.iBatisTools.Ex.DataAccess\ProphetsWay.iBatisTools.Ex.DataAccess.csproj", "{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Ex.DataAccess.Take1", "ProphetsWay.iBatisTools.Ex.DataAccess.Take1\ProphetsWay.iBatisTools.Ex.DataAccess.Take1.csproj", "{5083B697-4A9E-4B3C-A872-4926BFB99992}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProphetsWay.iBatisTools.Ex.Database", "ProphetsWay.iBatisTools.Ex.Database\ProphetsWay.iBatisTools.Ex.Database.sqlproj", "{14D737E6-A7AB-447D-B87F-7D50ACE36740}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProphetsWay.iBatisTools.Tests", "ProphetsWay.iBatisTools.Tests\ProphetsWay.iBatisTools.Tests.csproj", "{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}"
 EndProject
@@ -44,18 +40,10 @@ Global
 		{1B34AC74-0090-4F61-92AA-577351BCD41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B34AC74-0090-4F61-92AA-577351BCD41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B34AC74-0090-4F61-92AA-577351BCD41E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33459A9A-2CF4-41CF-972C-0EE2D836AC3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5083B697-4A9E-4B3C-A872-4926BFB99992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5083B697-4A9E-4B3C-A872-4926BFB99992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5083B697-4A9E-4B3C-A872-4926BFB99992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5083B697-4A9E-4B3C-A872-4926BFB99992}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14D737E6-A7AB-447D-B87F-7D50ACE36740}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{747EB8E5-B9DA-412A-ADAF-E38D26C0AAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
