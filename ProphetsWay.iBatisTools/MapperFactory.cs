@@ -58,9 +58,9 @@ namespace ProphetsWay.iBatisTools
 
                 return mapper;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception($"There was a problem when generating the SqlMapper for {assemblyName}.  See inner exception for details.", ex);
             }
         }
     }
