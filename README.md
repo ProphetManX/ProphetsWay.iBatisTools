@@ -49,10 +49,10 @@ you will need to have four specifically named queries created.
 ```
 When setup as per the previous example entity ```Company```
 ``` xml
-<select id="GetCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<insert id="InsertCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<update id="UpdateCompany" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
-<update id="DeleteCompanyById" parameterClass="ProphetsWay.iBatisTools.Ex.DataAccess.Entities.Company" />
+<select id="GetCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<insert id="InsertCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<update id="UpdateCompany" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
+<update id="DeleteCompanyById" parameterClass="ProphetsWay.Example.DataAccess.Entities.Company" />
 ```
 
 You will still need to manually write the queries however you want, but you will get the whole entity as your parameter object.
