@@ -65,7 +65,6 @@
   <ItemGroup>
     <PackageReference Include="IBatisNet" Version="1.0.0" />
     <PackageReference Include="ProphetsWay.BaseDataAccess" Version="1.1.1" />
-    <PackageReference Include="ProphetsWay.Utilities" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
 ﻿using IBatisNet.DataMapper;
 using IBatisNet.DataMapper.Configuration;
-using ProphetsWay.Utilities;
 using System;
 using System.Collections.Specialized;
 using System.Linq;
